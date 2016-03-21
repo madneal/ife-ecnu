@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: gainsboro;
+        }
+        header{
+            background: cornflowerblue;
+            color: white;
+            width: 100%;
+            height: 80px;
+        }
+        header h1{
+            display: inline;
+            position: relative;
+            top: 10px;
+            left: 2%;
+            font-weight: bold;
+        }
+        header ul{
+            position: relative;
+            top: 38%;
+            left: 50%;
+        }
+        header li{
+            display: inline;
+            color: #000;
+        }
+        section li{
+            display: list-item;
+        }
+        section ol{
+            position: relative;
+            left: 1%;
+        }
+        section,nav,footer{
+            margin: 20px;
+            padding: 5px;
+            background: white;
+        }
+        form{
+            margin: 20px;
+        }
+        .pic{
+            width: 300px;
+            height: 250px;
+        }
+    </style>
+    <title>任务一：零基础HTML编码</title>
+</head>
+<body>
+<header>
+    <h1>neal1991.github.io</h1>
+    <ul>
+        <li><a href="#sec1">The first article</a> </li>
+        <li><a href="#sec2">The second article</a> </li>
+        <li><a href="#sec3">The images</a> </li>
+        <li><a href="#sec4">The last artticle</a> </li>
+    </ul>
+</header>
+<section id="sec1">
+    <h1>The first class title of the article</h1> 
+    <h2>The second class title of the article</h2>
+    <p>this is a long article this is a long article this is a long article this is a long article this is a long article this is a long article this is a long article this is a long article this is a long article this is a long article
+        this is a long article this is a long article this is a long article this is a long article this is a long article </p>
+    <img src="../image/a1.jpg" class="pic">
+</section>
+<section id="sec2">
+    <h1>This is the first class title of another article</h1>
+    <h2>This is the second class of the article</h2>
+    <p>this is a long article this is a long article this is a long article this is a long article this is a long article this is a long article this is a long article this is a long article this is a long article this is a long article
+        this is a long article this is a long article this is a long article this is a long article this is a long article </p>
+    <img src="../image/a1.jpg" class="pic">
+</section>
+<section id="sec3">
+    <h1>image</h1>
+    <ul>
+        <li> <img src="../image/a1.jpg" class="pic"></li>
+        <li> <img src="../image/a1.jpg" class="pic"></li>
+        <li> <img src="../image/a1.jpg" class="pic"></li>
+        <li> <img src="../image/a1.jpg" class="pic"></li>
+    </ul>
+</section>
+<section id="sec4">
+    <h1>This is the first class title of the last article</h1>
+    <h2>This is the second class title of the article</h2>
+    <ol>
+        <li>1111111</li>
+        <li>22222</li>
+        <li>33333</li>
+        <li>44444</li>
+    </ol>
+</section>
+<footer>
+    <p>There is a table in the below.</p>
+    <table border="1">
+        <thead><tr>
+            <th>head</th>
+            <th>head</th>
+            <th>head</th>
+        </tr></thead>
+        <tbody>
+        <tr><td>cool</td><td>cool</td><td>cool</td></tr>
+        <tr><td>cool</td><td>cool</td><td>cool</td></tr>
+        <tr><td>cool</td><td>cool</td><td>cool</td></tr>
+        </tbody>
+        <tfoot>
+        <tr><td>sum</td><td colspan="2">coolcool</td> </tr>
+        </tfoot>
+    </table>
+</footer>
+<nav>
+    <h1>This will be a navigation in the future</h1>
+    <h2>This the title of the navigation</h2>
+    <form>
+        <p>
+            <label>email:</label>
+            <input type="email" placeholder="This is a textbox input">
+        </p>
+        <p>
+            <label>password:</label>
+            <input type="password" placeholder="This is a password input">
+        </p>
+        <ul>
+            <li>
+                <label>sex:</label>
+                <input type="radio" checked="checked" name="sex" value="male" id="male"><label for="male">male</label>
+                <input type="radio" name="sex" value="female" id="female"><label for="female">female</label>
+            </li>
+            <li>
+                <label>city:</label>
+                <select name="city">
+                    <option value="beijing" selected="selected">Beijing</option>
+                    <option value="shanghai">Shanghai</option>
+                    <option value="hefei">Hefei</option>
+                </select>
+            </li>
+            <li>
+                <label>hobby:</label>
+                <input type="checkbox" name="habit" id="art"><label for="art">Art</label>
+                <input type="checkbox" name="habit" id="sports"><label for="sports">Sports</label>
+                <input type="checkbox" name="habit" id="science"><label for="science">Science</label>
+            </li>
+            <p>self introduction</p>
+            <textarea>This is a multiline input area.</textarea>
+            <input type="submit" value="submitted">
+        </ul>
+    </form>
+</nav>
+<p>copyright&copy</p>
+</body>
+</html>
