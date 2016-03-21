@@ -2,65 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Task Three</title>
     <style type="text/css">
-        body{
-            font-family: serif;
-            margin: 0;
+        .container {
+            box-sizing: border-box;
+            position: relative;
+            background-color: #eee;
             padding: 20px;
-        }
-        .container{
-            margin: 0 auto;
-            padding: 20px;
-            background: #eee;
             border: 1px solid #999;
             overflow: auto;
         }
-        .left-panel{
-            position: relative;
-            float: left;
-            padding: 20px;
-            width: 200px;
-            height: 120px;
-            background: #fff;
-            border: 1px solid #999;
 
-            box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
+        .child {
+            /*box-sizing: border-box;*/
+            border: 1px solid #999;
+            background-color: white;
         }
-        .middle-pannel{
-            float: none;
-            width: auto;
+
+        #left {
+            float: left;
+            width: 200px;
+        }
+        #center {
+            padding: 20px;
             margin-left: 220px;
             margin-right: 140px;
-            padding: 20px;
-            background: #fff;
-            border: 1px solid #999;
-            box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
         }
-        .right-pannel{
-            position: relative;
+
+        #right {
             float: right;
-            padding: 20px;
             width: 120px;
-            height: 537px;
-            background: #fff;
-            border: 1px solid #999;
-            box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
+        }
+        img {
+            height: 80px;
+            width: 80px;
+        }
+
+        #left img {
+            float: left;
+            margin: 20px;
+        }
+        #right img {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+        #right:last-child{
+            margin-bottom: 10px;
         }
     </style>
-    <title>ife-ecnu: task3</title>
 </head>
 <body>
 <div class="container">
-    <div class="left-panel">1</div>
-    <div class="middle-pannel">1</div>
-    <div class="right-pannel">1</div>
-</div>
+    <div class="child" id="left">
+        <img src="../image/a1.jpg">
+        <h2>ife-ecnu</h2>
+    </div>
 
+
+    <div class="child" id="right">
+        <img src="../image/a1.jpg">
+        <img src="../image/a1.jpg">
+        <img src="../image/a1.jpg">
+        <img src="../image/a1.jpg">
+        <img src="../image/a1.jpg">
+    </div>
+    <div class="child" id="center">
+        <p>Our team consists of 5 members from different universities, even different cities. But I think it is really a good
+         idea to set up this course for the ones who are interested in front end development.</p>
+    </div>
+</div>
 </body>
 </html>
