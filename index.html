@@ -11,18 +11,29 @@
             font-family: serif;
             background: #000;
             color: #fff;
+            padding: 15px;
         }
         header{
-            margin: 10px;
-            padding: 5px;
+            margin: 20px;
+            padding: 10px;
+        }
+        header h1{
+            margin-bottom: 15px;
+            font-weight: bold;
         }
         .task{
             margin: 15px;
             padding: 5px;
         }
-        .task a{
-            color: #ffffff;
+        a{
+            color: honeydew;
             text-decoration: none;
+        }
+        a:hover{
+            font-size: 1.2em;
+        }
+        .list-item{
+            margin-bottom: 5px;
         }
     </style>
     <title>ife-ECNU</title>
@@ -30,17 +41,17 @@
 <body>
 <header>
     <h1>neal1991.github.io</h1>
-    <p>This project is the task in Baidu Institute Front End Technology. You can fork the code fron <a href="https://github.com/neal1991/ife-ecnu">
+    <p>This project is the task in Baidu Institute Front End Technology. You can fork the code from <a href="https://github.com/neal1991/ife-ecnu">
         github.
     </a> </p>
     <div class="task">
         <ul>
-            <li><a href="http://neal1991.github.io/ife-ecnu/task1/index.html">task1</a> </li>
+            <li class="list-item"><a href="http://neal1991.github.io/ife-ecnu/task1/index.html">task1</a> </li>
             <p>This is the first task in ife. It is quite simeple,and contains only the html elements.</p>
-            <li><a href="http://neal1991.github.io/ife-ecnu/task2/index.html">task2</a> </li>
+            <li class="list-item"><a href="http://neal1991.github.io/ife-ecnu/task2/index.html">task2</a> </li>
             <p>It inherit the most elements from the task2, and add the features by css.</p>
-            <li>task2</li>
-            <li>task3</li>
+            <li class="list-item">task2</li>
+            <li class="list-item">task3</li>
         </ul>
     </div>
 </header>
