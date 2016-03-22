@@ -36,15 +36,22 @@
             color: #ffffff;
             text-decoration: none;
         }
+        article{
+            padding: 20px;
+        }
+        h1,h2,p{
+            margin: 10px;
+        }
         section li{
             display: list-item;
+            list-style: none;
         }
         section ol{
             position: relative;
             left: 1%;
         }
-        section,nav,footer{
-            margin: 20px;
+        article,nav{
+            margin: 10px;
             padding: 5px;
             background: white;
         }
@@ -52,17 +59,28 @@
             margin: 20px;
         }
         .pic{
-            width: 300px;
-            height: 250px;
+            width: 200px;
+            height: 150px;
         }
         table{
             width: 100%;
             line-height: 24px;
-            border: 1px solid #000;
+            border-collapse: collapse;
         }
         th{
             background: #000;
             color: #fff;
+            padding-left: 5px;
+            text-align: center;
+        }
+        td{
+            padding-left: 5px;
+        }
+        tfoot{
+            background: #eeeeee;
+        }
+        form{
+            position: relative;
         }
     </style>
     <title>ife-ecnu: task2</title>
@@ -77,21 +95,25 @@
         <li><a href="#sec4">The last artticle</a> </li>
     </ul>
 </header>
-<section id="sec1">
-    <h1>The first class title of the article</h1> 
+<article><section id="sec1">
+    <h1>The first class title of the article</h1>
     <h2>The second class title of the article</h2>
     <p>this is a long article this is a long article this is a long article this is a long article this is a long article this is a long article this is a long article this is a long article this is a long article this is a long article
         this is a long article this is a long article this is a long article this is a long article this is a long article </p>
     <img src="../image/a1.jpg" class="pic">
-</section>
-<section id="sec2">
+    </section>
+</article>
+<article>
+    <section id="sec2">
     <h1>This is the first class title of another article</h1>
     <h2>This is the second class of the article</h2>
     <p>this is a long article this is a long article this is a long article this is a long article this is a long article this is a long article this is a long article this is a long article this is a long article this is a long article
         this is a long article this is a long article this is a long article this is a long article this is a long article </p>
     <img src="../image/a1.jpg" class="pic">
-</section>
-<section id="sec3">
+    </section>
+</article>
+<article>
+    <section id="sec3">
     <h1>image</h1>
     <ul>
         <li> <img src="../image/a1.jpg" class="pic"></li>
@@ -99,8 +121,10 @@
         <li> <img src="../image/a1.jpg" class="pic"></li>
         <li> <img src="../image/a1.jpg" class="pic"></li>
     </ul>
-</section>
-<section id="sec4">
+    </section>
+</article>
+<article>
+    <section id="sec4">
     <h1>This is the first class title of the last article</h1>
     <h2>This is the second class title of the article</h2>
     <ol>
@@ -109,15 +133,16 @@
         <li>33333</li>
         <li>44444</li>
     </ol>
-</section>
-<footer>
+    </section>
     <p>There is a table in the below.</p>
-    <table border="1">
-        <thead><tr>
+    <table border="1" cellspacing="0">
+        <thead>
+        <tr>
             <th>head</th>
             <th>head</th>
             <th>head</th>
-        </tr></thead>
+        </tr>
+        </thead>
         <tbody>
         <tr><td>cool</td><td>cool</td><td>cool</td></tr>
         <tr><td>cool</td><td>cool</td><td>cool</td></tr>
@@ -127,7 +152,8 @@
         <tr><td>sum</td><td colspan="2">coolcool</td> </tr>
         </tfoot>
     </table>
-</footer>
+</article>
+
 <nav>
     <h1>This will be a navigation in the future</h1>
     <h2>This the title of the navigation</h2>
@@ -140,32 +166,31 @@
             <label>password:</label>
             <input type="password" placeholder="This is a password input">
         </p>
-        <ul>
-            <li>
-                <label>sex:</label>
-                <input type="radio" checked="checked" name="sex" value="male" id="male"><label for="male">male</label>
-                <input type="radio" name="sex" value="female" id="female"><label for="female">female</label>
-            </li>
-            <li>
-                <label>city:</label>
-                <select name="city">
-                    <option value="beijing" selected="selected">Beijing</option>
-                    <option value="shanghai">Shanghai</option>
-                    <option value="hefei">Hefei</option>
-                </select>
-            </li>
-            <li>
-                <label>hobby:</label>
-                <input type="checkbox" name="habit" id="art"><label for="art">Art</label>
-                <input type="checkbox" name="habit" id="sports"><label for="sports">Sports</label>
-                <input type="checkbox" name="habit" id="science"><label for="science">Science</label>
-            </li>
+        <p>
+            <label>sex:</label>
+            <input type="radio" checked="checked" name="sex" value="male" id="male"><label for="male">male</label>
+            <input type="radio" name="sex" value="female" id="female"><label for="female">female</label></p>
+        <p>
+            <label>city:</label>
+            <select name="city">
+                <option value="beijing" selected="selected">Beijing</option>
+                <option value="shanghai">Shanghai</option>
+                <option value="hefei">Hefei</option>
+            </select>
+        </p>
+        <p>
+            <label>hobby:</label>
+            <input type="checkbox" name="habit" id="art"><label for="art">Art</label>
+            <input type="checkbox" name="habit" id="sports"><label for="sports">Sports</label>
+            <input type="checkbox" name="habit" id="science"><label for="science">Science</label>
+        </p>
             <p>self introduction</p>
-            <textarea>This is a multiline input area.</textarea>
-            <input type="submit" value="submitted">
-        </ul>
+        <p><textarea>This is a multiline input area.</textarea></p>
+        <p><input type="submit" value="submitted"></p>
     </form>
 </nav>
-<p>copyright&copy</p>
+<footer>
+    <p>copyright&copy</p>
+</footer>
 </body>
 </html>
