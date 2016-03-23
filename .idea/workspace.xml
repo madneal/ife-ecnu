@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="78a20ae2-bf05-497c-bc54-90976168f021" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/task6/index.html" afterPath="$PROJECT_DIR$/task6/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ife-ecnu.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +27,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7401575">
-              <caret line="53" column="83" selection-start-line="53" selection-start-column="83" selection-end-line="53" selection-end-column="83" />
+            <state vertical-scroll-proportion="0.7637795">
+              <caret line="54" column="83" selection-start-line="54" selection-start-column="83" selection-end-line="54" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -456,12 +454,12 @@
       <workItem from="1458528724486" duration="7392000" />
       <workItem from="1458551747513" duration="10164000" />
       <workItem from="1458692281306" duration="1781000" />
-      <workItem from="1458699902943" duration="13102000" />
+      <workItem from="1458699902943" duration="13268000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32439000" />
+    <option name="totallyTimeSpent" value="32605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="14" y="39" width="1276" height="777" extended-state="0" />
@@ -604,8 +602,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7401575">
-          <caret line="53" column="83" selection-start-line="53" selection-start-column="83" selection-end-line="53" selection-end-column="83" />
+        <state vertical-scroll-proportion="0.7637795">
+          <caret line="54" column="83" selection-start-line="54" selection-start-column="83" selection-end-line="54" selection-end-column="83" />
           <folding />
         </state>
       </provider>
