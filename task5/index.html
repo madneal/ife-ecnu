@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ife-ecnu: task5</title>
+    <style type="text/css">
+        body{
+            background: gray;
+        }
+        .news{
+            width: 980px;
+            height: 1386px;
+            background: #ffffff;
+            margin: 0 auto;
+        }
+        .log{
+            background: brown;
+            width: 110px;
+            height: 61px;
+        }
+        .log h6{
+            font-size: 12px;
+            color: #ffffff;
+            font-family: '黑体';
+            padding: 2px;
+            top: 10%;
+            position: relative;
+        }
+        header{
+            width: 892px;
+            height: 61px;
+            border-bottom: 2px solid #938e8e;
+            margin: 0 auto;
+        }
+        header .date{
+            font-size: 12px;
+            color: #d45d5c;
+            font-family: '黑体';
+            float: right;
+            position: relative;
+            top: -30px;
+        }
+
+        .top{
+            width: 892px;
+            height: 301px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .top .background-img{
+            width: 191px;
+            height: 301px;
+            opacity: 0.5;
+        }
+        .top .top-fig{
+            width: 641px;
+            height: 301px;
+            background-image: url("../image/banner.jpg");
+        }
+        .background-img{
+            width: 191px;
+            height: 301px;
+        }
+        .left-img{
+            background: green;
+            float: left;
+        }
+        .right-img{
+            background: rosybrown;
+            position: absolute;
+            left: 641px;
+        }
+        .top .title{
+            width: 203px;
+            height: 301px;
+            border-top: 2px solid #cc8091;
+            position: relative;
+            top: -301px;
+            left: 660px;
+            font-family: '微软雅黑';
+        }
+        .top .title .second-title{
+            font-size: 24px;
+            text-decoration: underline;
+            font-family:'微软雅黑' ;
+            color: #000;
+            line-height: 20px;
+        }
+        .top .title .intro{
+            font-size: 12px;
+            color: #676767;
+            font-family: '楷体';
+            line-height: 10px;
+        }
+        .top .title #num{
+            font-style: italic;
+            font-size: 116px;
+            color: #75b86b;
+            position: relative;
+            top: -40%;
+        }
+        .top .title #css-num{
+            font-size: 55px;
+            color: #cc8091;
+            position: relative;
+            top: -75%;
+        }
+        .top .title #css1{
+            font-size: 21px;
+            color: #cc8091;
+            position: relative;
+            top: -110%;
+            left: 40%;
+        }
+        .top .title #css2{
+            font-size: 12px;
+            color: #999999;
+            position: relative;
+            top: -115%;
+            left: 40%;
+        }
+        .bottom{
+            width: 892px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .bottom .para{
+            font-size: 12px;
+            color: #767777;
+            font-family: '宋体';
+            line-height: 16px;
+            display: inline;
+            width: 200px;
+        }
+        .bottom .para h2{
+            font-size: 16px;
+            font-weight: bold;
+            font-family: '微软雅黑';
+            text-decoration: underline;
+        }
+        .bottom .para #what{
+            color: #418c59;
+        }
+        .bottom .para #when{
+            color: #d2994f;
+        }
+        .bottom .para #how{
+            color: #cc7680;
+        }
+        .bottom #p1{
+            float: left;
+        }
+        .bottom #p2{
+            float: left;
+        }
+        .bottom #p3{
+            float: left;
+        }
+        .bottom .para ul{
+            position: relative;
+            left: -37px;
+        }
+        .bottom .para li{
+            list-style: none;
+            line-height: 16px;
+        }
+        .bottom .para .percent{
+            font-size: 12px;
+            color: #cd4a48;
+            font-style: italic;
+            opacity: 0.7;
+            font-family: '微软雅黑';
+        }
+        .bottom-content{
+            width: 892px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="news">
+    <header>
+        <div class="log">
+            <h6>ife.baidu.com</h6>
+        </div>
+        <div class="date">
+            <p>2016.03</p>
+        </div>
+    </header>
+    <article>
+        <div class="top">
+            <div class="top-fig">
+                <div class="background-img left-img"></div>
+                <div class="background-img right-img"></div>
+            </div>
+            <div class="title">
+                <p class="second-title">ABOUT</p>
+                <p class="second-title">Technologe</p>
+                <p class="intro">about technology about technology about technology</p>
+                <p id="num">700</p>
+                <p id="css-num">3.2</p>
+                <p id="css1">css</p>
+                <p id="css2">csscsscsscsscssscsss</p>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="para" id="p1">
+                <h2 id="what">What</h2>
+                <p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                    前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+            </div>
+            <div class="para" id="p2">
+                <h2 id="when">When</h2>
+                <p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                    前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+            </div>
+            <div class="para" id="p3">
+                <h2 id="how">How</h2>
+                <p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+                <ul>
+                    <li>What-----<span class="percent">40%</span> </li>
+                    <li>What-----<span class="percent">30%</span> </li>
+                    <li>What-----<span class="percent">30%</span> </li>
+                </ul>
+            </div>
+
+        </div>
+    </article>
+    <div class="bottom-content">
+        <article>
+            <div class="left">
+
+            </div>
+        </article>
+        <article>
+            <div class="right">
+
+            </div>
+        </article>
+    </div>
+
+</div>
+</body>
+</html>
