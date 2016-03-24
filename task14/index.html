@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ife-ecnu: task14</title>
+</head>
+<body>
+
+<h3>污染城市列表</h3>
+<ul id="aqi-list">
+</ul>
+
+<script type="text/javascript">
+
+    var aqiData = [
+        ["北京", 90],
+        ["上海", 50],
+        ["福州", 10],
+        ["广州", 50],
+        ["成都", 90],
+        ["西安", 100]
+    ];
+
+    (function () {
+        var arr = [];
+        for(var i = 0;i <aqiData.length;i ++)
+        {
+            if (aqiData[i][1]>60)
+            {
+                arr.push([aqiData[i][0],aqiData[i][1]]);
+            }
+        }
+        arr.sort(function(pre,next){
+            return next[1]-pre[1];
+        });
+        var result = '';
+        for (var i = 0;i < arr.length;i ++)
+        {
+            result += '<li>第'+(i+1)+'名：'+ arr[i][0]+''+arr[i][1]+'</li>';
+        }
+        document.getElementById('aqi-list').innerHTML = result;
+    })();
+
+</script>
+</body>
+</html>

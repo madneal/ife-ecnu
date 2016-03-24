@@ -3,25 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <title>ife-ecnu: task12</title>
+    <style type="text/css">
+        body{
+            padding: 10px;
+        }
+        section{
+            margin: 15px;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        thead{
+            background: #000;
+            color: #fff;
+        }
+        tbody tr:nth-child(-n+3){
+            color: red;
+        }
+        tbody tr:nth-child(odd){
+            background: #eeeeee;
+        }
+        tbody tr:nth-child(even){
+            background: #ffffff;
+        }
+        .input{
+            width: 100px;
+            transition: width 0.5s ease-in;
+        }
+        .input:focus{
+            width: 200px;
+        }
+        .container{
+            width: 500px;
+            height: 500px;
+            float: left;
+        }
+        .container .banner1{
+            background: red;
+        }
+        .container .banner2{
+            background: blue;
+        }
+        .container .banner3{
+            background: green;
+        }
+    </style>
 </head>
 <body>
 <section>
-    <table>
-        <th>
-        <td></td><td></td><td></td></th>
-        <tr><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td></tr>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>head</th>
+            <th>head</th>
+            <th>head</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+        </tbody>
     </table>
 </section>
-<section></section>
-<section></section>
+<section>
+    <input type="text" class="input">
+</section>
+<section>
+    <div class="container">
+        <div class="banner">
+            <div id="banner1"></div>
+            <div id="banner2"></div>
+            <div id="banner3"></div>
+        </div>
+        <div class="banner-tab">
+            <label for="banner1" class="banner-btn">1</label>
+            <label for="banner2" class="banner-btn">2</label>
+            <label for="banner3" class="banner-btn">3</label>
+        </div>
+    </div>
+</section>
 </body>
 </html>
