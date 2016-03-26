@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>IFE JavaScript Task 01</title>
+    <title>ife-ecnu: 15</title>
 </head>
 <body>
 
@@ -16,16 +16,11 @@
     <li>成都空气质量：<b>90</b></li>
 </ul>
 
-<ul id="resort">
-    <!-- 
-    <li>第一名：北京空气质量：<b>90</b></li>
-    <li>第二名：北京空气质量：<b>90</b></li>
-    <li>第三名：北京空气质量：<b>90</b></li>
-     -->
 
-</ul>
 
 <button id="sort-btn">排序</button>
+<ul id="resort">
+</ul>
 
 <script type="text/javascript">
 
@@ -38,7 +33,6 @@
         /*
          coding here
          */
-
         /*
          data = [
          ["北京", 90],
@@ -46,6 +40,20 @@
          ……
          ]
          */
+        var data = [];
+        var sou = document.getElementById("source");
+        var items = sou.getElementsByTagName("li");
+        for (var i = 0;i < items.length;i ++)
+        {
+            //console.log(items[i].innerHTML);
+            var str = items[i].innerHTML;
+            var str_split = str.split('<b>')[0];
+            //console.log(str_split);
+            var name = str_split.substring(0,str_split.length-5);
+            console.log(name);
+            var value = str.split('<b>')[1]
+            data.push([name,value]);
+        }
 
         return data;
 
@@ -57,7 +65,10 @@
      * 返回一个排序后的数组
      */
     function sortAqiData(data) {
-
+        data.sort(function(pre,next){
+            return next -pre;
+        })
+        return data;
     }
 
     /**
@@ -66,7 +77,11 @@
      * 格式见ul中的注释的部分
      */
     function render(data) {
-
+        var content = document.getElementById("resort");
+        for (var i = 0;i < data.length;i ++)
+        {
+           content.innerHTML += '<li>'+data[i][0]+': '+data[i][1]+'</li>'
+        }
     }
 
     function btnHandle() {
@@ -79,6 +94,10 @@
     function init() {
 
         // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
+        var btn = document.getElementById('sort-btn');
+        btn.onclick = function(){
+            btnHandle();
+        }
 
     }
 
