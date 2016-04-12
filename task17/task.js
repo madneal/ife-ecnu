@@ -50,7 +50,7 @@ var aqiSourceData = {
 var chartData = {};
 
 var pageState = {
-    nowSelectCity: "北京",
+    nowSelectCity: "-1",
     nowGraTime: "day"
 };
 //获取随机颜色
