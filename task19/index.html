@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ife-ecnu: task19</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		article{
+			width: 800px;
+			margin: 30px auto;
+		}
+		fieldset{
+			border-radius: 4px;
+			width: 800px;
+			padding: 10px;
+		}
+		input{
+			border-radius: 4px;
+			outline: none;
+			padding: 0 1em;
+			height: 25px;
+		}
+		.btn-group{
+			float: right;
+			display: inline-block;
+		}
+		.btn-group input[type=button]{
+			cursor: pointer;
+		}
+		.result{
+			width: 800px;
+			height: 400px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			padding: 10px 20px;
+			margin-top: 30px;
+			text-align: center;
+		}
+		.chart{
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			width: 100%;
+			height: 350px;
+		}
+		.chart div{
+			display: inline-block;
+			width: 10px;
+			margin-right: 5px;
+		}
+	</style>
+</head>
+<body>
+<article>
+	<fieldset>
+		<legend>The input of the form</legend>
+		<input type="text" name="number" id="number" placeholder="please input the number between 10 and 100"></input>
+		<div class="btn-group">
+			<input type="button" id="left-in" value="left in"></input>
+			<input type="button" id="right-in" value="right in"></input>
+			<input type="button" id="left-out" value="left out"></input>
+			<input type="button" id="right-out" value="right out"></input>
+			<input type="button" id="random" value="random create"></input>
+			<input type="button" id="sort" value="sort"></input>
+		</div>
+		<div class="result">
+			<h2>The view of the buble sort</h2>
+			<div class="chart"></div>
+		</div>
+	</fieldset>
+</article>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
