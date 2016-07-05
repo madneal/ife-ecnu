@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ife-ecnu:task29</title>
+</head>
+<body>
+<table>
+	<tr>
+		<td>名称</td>
+		<td><input type="text" id="name"></td>
+		<td><button id="validate">验证</button></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td id="info">必填，长度为4~16字符</td>
+		<td></td>
+	</tr>
+</table>
+<script type="text/javascript">
+	var inputName = document.getElementById("name");
+	var info = document.getElementById("info");
+	document.getElementById("validate").onclick = validate;
+	function conutLength(str) {
+		var length = 0;
+		for (var i = 0,len = str.length;i < len;i++) {
+			var code = str.charCodeAt(i);
+			if (code >= 0 && code <=128) {
+				length = length + 1;
+			}
+			else {
+				length = length + 2;
+			}
+		}
+		return length;
+	}
+
+	function validate() {
+		var inputValue = inputName.value;
+		if (conutLength(inputValue) === 0) {
+			info.innerHTML = "名称不能为空";
+			info.style.color = 'red';
+			inputName.style.border = '1px solid red';
+		}
+		else if (conutLength(inputValue) >= 4 && conutLength(inputValue) <= 16) {
+			info.innerHTML = '格式正确';
+			info.style.color = 'lightgreen';
+			inputName.style.border = '1px solid lightgreen';
+		}
+		else {
+			info.innerHTML = '请输入长度为4~16位字符';
+			info.style.color = 'red';
+			inputName.style.border = '1px solid red';
+		}
+	}
+</script>
+</body>
+</html>
