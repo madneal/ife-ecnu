@@ -3,9 +3,9 @@ function Observer(data) {
 	this.walk(data);
 }
 
-let p = Observber.prototype;
+let p = Observer.prototype;
 
-p.walk = function() {
+p.walk = function(obj) {
 	let val;
 	for (let key in obj) {
 		if(obj.hasOwnProperty(key)) {
@@ -19,7 +19,7 @@ p.walk = function() {
 }
 
 p.convert = function(key, val) {
-	Object.definePropertry(this.data, key, {
+	Object.defineProperty(this.data, key, {
 		enumerable: true,
 		configurable: true,
 		get: function() {
@@ -37,3 +37,16 @@ p.convert = function(key, val) {
 		}
 	})
 }
+
+let data = {
+	person: {
+		name: 'neal',
+		age: 16,
+		sex: 'male'
+	},
+	address: {
+		city: 'shanghai'
+	}
+};
+
+let app = new Observer(data);
