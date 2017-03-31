@@ -2,16 +2,35 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Echarts task1</title>
+	<title>Echarts task2</title>
 	<script type="text/javascript" src="echarts.min.js"></script>
+	<style type="text/css">
+		.main {
+			background: lightblue;
+		}
+	</style>
 </head>
 <body>
 <div id="main" style="width: 600px;height:400px;"></div>
 	<script type="text/javascript">
 		var myChart = echarts.init(document.getElementById('main'));
 		option = {
+			backgroundColor: '#eee',
 		    title: {
-		        text: 'ECharts 入门示例'
+		        text: 'What\'s my credit score?',
+		        subtext: 'Puerto Rico, % decrease on a year?',
+		        textStyle: {
+		        	color: '#333',
+		        	fontWeight: 'bolder',
+		        	fontFamily: 'sans-serif',
+		        	fontSize: 18
+		        },
+		        subtextStyle: {
+		        	color: 'lightblue',
+		        	fontWeight: 'normal',
+		        	fontFamily: 'sans-serif',
+		        	fontSize: 14
+		        }
 		    },
 		    tooltip: {},
 		    legend: {
