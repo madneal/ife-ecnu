@@ -7,6 +7,7 @@
 	<style type="text/css">
 		.main {
 			background: lightblue;
+			margin: 0 auto;
 		}
 	</style>
 </head>
@@ -23,24 +24,30 @@
 		        	color: '#333',
 		        	fontWeight: 'bolder',
 		        	fontFamily: 'sans-serif',
-		        	fontSize: 18
+		        	fontSize: 18,
 		        },
 		        subtextStyle: {
-		        	color: 'lightblue',
+		        	color: '#777',
 		        	fontWeight: 'normal',
 		        	fontFamily: 'sans-serif',
-		        	fontSize: 14
+		        	fontSize: 14,
 		        }
+		    },
+		    grid: {
+		    	top: 100
 		    },
 		    tooltip: {},
 		    legend: {
 		        data:['销量', '销量1'],
 		        top: 50,
-		        left: 10
+		        left: 10,
+		        padding: 5
 		    },
 		    xAxis: {
 		        data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"],
-		        position: 'top'
+		        position: 'top',
+		        show: true, 
+		        gridIndex: 0
 		    },
 		    yAxis: {},
 		    series: [{
