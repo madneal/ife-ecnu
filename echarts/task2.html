@@ -17,7 +17,7 @@
 		var myChart = echarts.init(document.getElementById('main'));
 		option = {
 			backgroundColor: '#eee',
-		    title: {
+		    title: [{
 		        text: 'What\'s my credit score?',
 		        subtext: 'Puerto Rico, % decrease on a year?',
 		        textStyle: {
@@ -32,9 +32,14 @@
 		        	fontFamily: 'sans-serif',
 		        	fontSize: 14,
 		        }
-		    },
+		    }, {
+		    	text: 'I am at the bottom',
+		    	subtext: 'Iam the bottom subtext',
+		    	bottom: 20
+		    }],
 		    grid: {
-		    	top: 100
+		    	top: 100,
+		    	bottom: 80
 		    },
 		    tooltip: {},
 		    legend: {
@@ -47,7 +52,14 @@
 		        data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"],
 		        position: 'top',
 		        show: true, 
-		        gridIndex: 0
+		        gridIndex: 0,
+		        type: 'category',
+		        axisLine: {
+		            onZero: false
+		        },
+		        axisTick:{
+		            alignWithLabel: true
+		        }
 		    },
 		    yAxis: {},
 		    series: [{
