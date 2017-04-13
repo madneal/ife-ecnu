@@ -1,0 +1,15 @@
+{
+  "name": "parse-csv",
+  "version": "1.0.0",
+  "description": "to parse the csv file to json",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+  	"co": "latest",
+  	"colors": "latest"
+  },
+  "author": "neal1991",
+  "license": "MIT"
+}
