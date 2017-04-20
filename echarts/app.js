@@ -13,8 +13,13 @@ function parseCsv(fileName) {
 		try{
 			console.log(fileName);
 			var str = yield read(fileName);	
-			var result = parseToJson(str);
-			yield write(resultfile, result);
+			var result = yield parseToJson(str);
+			// yield write('result.json', JSON.stringify(result));
+			// console.log('final result ' + JSON.stringify(result));
+			for (var key in result) {
+				console.log(key);
+				yield write(__dirname + '/jsondata/' + key + '.json', JSON.stringify(result[key]));
+			}
 		} catch(err) {
 			console.log(colors.red(err));
 		}
@@ -35,20 +40,33 @@ function write(file, content) {
 
 function parseToJson(str) {
 	return co(function*() {
-		var arr = str.split('\r\n');
-		var company = '';
-		arr.forEach(function(lineData) {
-			var lineDataArr = lineData.split(',');
-			if (company !== lineDataArr[1]) {
+		try {
+			var arr = str.split('\r\n');
+			var company = '';
+			var result = [];
+			console.log(colors.blue(arr[0]));
+			arr.forEach(function(lineData) {
+				var lineDataArr = lineData.split(',');
+				var object = {};
+				for (var i = 0; i < lineDataArr.length; i++) {
+					object[jsonKeyArr[i]] = lineDataArr[i];
+				}
+				result.push(object);
+			});
+			var jsonData = {};
+			var key = '';
+			result.forEach(function(ele) {
+				if (key != ele.ticker) {
+					key = ele.ticker;
+					jsonData[key] = [];
+				}
+				jsonData[key].push(ele);
+			})
+			console.log('the typer of JsonData:' + typeof(jsonData));
+			return jsonData;
+		} catch(e) {
+			console.log(colors.red(e));
+		}
 
-				var result = [];
-			}
-			var object = result[lineDataArr[1]];
-			for (var i = 0; i < lineDataArr.length; i++) {
-				object[jsonKeyArr[i]] = lineDataArr[i];
-			}
-			result.push(object);
-		});
-		return JSON.stringify(result);
 	})
 }
