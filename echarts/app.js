@@ -14,8 +14,6 @@ function parseCsv(fileName) {
 			console.log(fileName);
 			var str = yield read(fileName);	
 			var result = yield parseToJson(str);
-			// yield write('result.json', JSON.stringify(result));
-			// console.log('final result ' + JSON.stringify(result));
 			for (var key in result) {
 				console.log(key);
 				yield write(__dirname + '/jsondata/' + key + '.json', JSON.stringify(result[key]));
